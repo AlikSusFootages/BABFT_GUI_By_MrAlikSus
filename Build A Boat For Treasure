@@ -1,0 +1,111 @@
+--ui library: Kavo UI
+
+
+local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+
+local window = kavoUi.CreateLib("BABFT GUI","Sentinel")
+
+local Tab1 = window:NewTab("Quests")
+local Section1 = Tab1:NewSection("Quests")
+
+local Tab2 = window:NewTab("Main")
+local Section2 = Tab2:NewSection("Main")
+
+local Scripts = window:NewTab("Scripts")
+local SectionScripts = Scripts:NewSection("Scripts")
+
+local Credits = window:NewTab("Credits")
+local SectionCredits = Credits:NewSection("Credits by MrAlikSus @A4GO10")
+
+local Hub = window:NewTab("Hub")
+local SectionHub = Hub:NewSection("Hub")
+
+local TP = window:NewTab("Teleports")
+local SectionTP = TP:NewSection("Teleports")
+
+--Quests
+
+Section1:NewButton("Fabbi Boss", "Spawn Fabbi Boss", function()
+    workspace.QuestMakerEvent:FireServer(100)
+end)
+
+
+
+--Main
+
+Section2:NewSlider("WalkSpeed", "Change Your WalkSpeed", 150, 15, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section2:NewButton("Reset WalkSpeed", "Reset Your WalkSpeed", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 15
+end)
+
+Section2:NewSlider("JumpPower", "Change Your JumpPower", 250, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+Section2:NewButton("Reset JumpPower", "Reset Your JumpPower", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+Section2:NewButton("Infinite Jump", "Lets you infinitely jump", function()
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+        end)
+    end)
+
+Section2:NewSlider("FieldOfView", "Change Your FOV", 120, 0, function(s)
+    game.workspace.CurrentCamera.FieldOfView = s
+end)
+
+Section2:NewButton("Reset FieldOfView", "Reset Your FOV", function()
+    game.workspace.CurrentCamera.FieldOfView = 70
+end)
+
+--Scripts
+
+SectionScripts:NewButton("AutoFarm", "COEMSðŸ¤‘", function ()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Build-A-Boat-For-Treasure-Bot-Tresure-uto-Gold-4310"))()
+end)
+
+
+SectionScripts:NewButton("Infinite Yield", "Execute Infinite Yield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+SectionScripts:NewButton("Fly", "Fly Script", function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+SectionScripts:NewButton("AutoBuild", "Execute AutoBuild", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/max2007killer/auto-build-not-limit/main/autobuild.txt"))()
+end)
+
+--HubS
+
+SectionHub:NewLabel("Credits To Owner")
+
+SectionHub:NewButton("VHub", "Execute VHub", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Veincx5315/Created/VHub/Simple'),true))()
+end)
+
+SectionHub:NewButton("Astra Hub NEED KEY", "Execute Astra Hub", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/0YezNNRh",true))()
+end)
+
+--Teleports
+
+SectionTP:NewButton("White Team", "Teleport to White Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49.8612099, -9.70000362, -498.872803, -0.993541121, 1.39403011e-09, 0.113472886, 2.33941555e-09, 1, 8.19821722e-09, -0.113472886, 8.41072545e-09, -0.993541121)
+end)
+
+
+
+
+--Credits
+
+SectionCredits:NewLabel("Discord: Footages#7288")
