@@ -1,20 +1,16 @@
--- создаем объект ScreenGui
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 
--- создаем кнопку
 local button = Instance.new("TextButton")
 button.Position = UDim2.new(0.5, 400, 0.5, -200)
 button.Size = UDim2.new(0, 50, 0, 50)
 button.Text = "OpenGui"
 button.Parent = gui
 
--- функция, которая нажимает клавишу "O"
 local function pressO()
     Enum.KeyCode.F
 end
 
--- обработчик нажатия на кнопку
 button.MouseButton1Click:Connect(pressO)
 
 
