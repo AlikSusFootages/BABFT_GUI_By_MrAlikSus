@@ -1,20 +1,20 @@
 local gui = Instance.new("ScreenGui")
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 
+
 local button = Instance.new("TextButton")
 button.Position = UDim2.new(0.5, 400, 0.5, -200)
 button.Size = UDim2.new(0, 50, 0, 50)
 button.Text = "OpenGui"
 button.Parent = gui
 
+
 local function pressO()
     Enum.KeyCode.F
 end
 
 
-
-
-
+button.MouseButton1Click:Connect(pressO)
 
 
 
@@ -131,4 +131,4 @@ end)
 
 --Credits
 
-SectionCredits:NewLabel("Discord: Footages#7288"
+SectionCredits:NewLabel("Discord: Footages#7288")
