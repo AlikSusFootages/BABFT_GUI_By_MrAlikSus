@@ -11,7 +11,7 @@ button.Parent = gui
 
 -- функция, которая нажимает клавишу "O"
 local function pressO()
-    Enum.KeyCode.O
+    Enum.KeyCode.F
 end
 
 -- обработчик нажатия на кнопку
@@ -129,7 +129,7 @@ SectionTP:NewButton("Red Team", "Teleport to Red Team", function()
 end)
 
 
- Credits:NewKeybind("KeyBind", "Open With O", Enum.KeyCode.O, function()
+ Credits:NewKeybind("KeyBind", "Open With F", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
