@@ -1,4 +1,32 @@
---ui library: Kavo UI
+UI library: Kavo UI
+
+Credits to MrAlikSus
+Discord: Footages#7288
+
+
+
+-- создаем объект ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+-- создаем кнопку
+local button = Instance.new("TextButton")
+button.Position = UDim2.new(0.5, 400, 0.5, -200)
+button.Size = UDim2.new(0, 50, 0, 50)
+button.Text = "OpenGui"
+button.Parent = gui
+
+-- функция, которая нажимает клавишу "O"
+local function pressO()
+    Enum.KeyCode.O
+end
+
+-- обработчик нажатия на кнопку
+button.MouseButton1Click:Connect(pressO)
+
+
+
+
 
 
 local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
@@ -103,8 +131,14 @@ SectionTP:NewButton("White Team", "Teleport to White Team", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49.8612099, -9.70000362, -498.872803, -0.993541121, 1.39403011e-09, 0.113472886, 2.33941555e-09, 1, 8.19821722e-09, -0.113472886, 8.41072545e-09, -0.993541121)
 end)
 
+SectionTP:NewButton("Red Team", "Teleport to Red Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(374.407898, -9.3237114, -65.1305313, 0.00207502581, -7.72008235e-09, 0.999997854, 2.67248375e-08, 1, 7.66464492e-09, -0.999997854, 2.67088769e-08, 0.00207502581)
+end)
 
 
+ Credits:NewKeybind("KeyBind", "Open With O", Enum.KeyCode.O, function()
+	Library:ToggleUI()
+end)
 
 --Credits
 
