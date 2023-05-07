@@ -11,7 +11,7 @@ local function pressO()
     Enum.KeyCode.F
 end
 
-button.MouseButton1Click:Connect(pressO)
+
 
 
 
