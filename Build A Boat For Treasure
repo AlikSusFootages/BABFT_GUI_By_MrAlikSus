@@ -126,7 +126,7 @@ SectionTP:NewButton("Red Team", "Teleport to Red Team", function()
 end)
 
 
- Credits:NewKeybind("KeyBind", "Open With F", Enum.KeyCode.F, function()
+Credits:NewKeybind("KeyBind", "Open With F", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
