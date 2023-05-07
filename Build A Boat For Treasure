@@ -10,7 +10,8 @@ button.Parent = gui
 
 
 local function pressO()
-    Enum.KeyCode.F
+    local input = game:GetService("UserInputService")
+    input:KeyDown(Enum.KeyCode.F)
 end
 
 
