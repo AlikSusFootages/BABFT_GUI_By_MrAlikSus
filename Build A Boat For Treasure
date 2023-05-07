@@ -126,10 +126,11 @@ SectionTP:NewButton("Red Team", "Teleport to Red Team", function()
 end)
 
 
+--Credits
+
+SectionCredits:NewLabel("Discord: Footages#7288")
+
 Credits:NewKeybind("KeyBind", "Open With F", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
---Credits
-
-SectionCredits:NewLabel("Discord: Footages#7288")
